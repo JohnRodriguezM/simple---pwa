@@ -1,0 +1,28 @@
+meta etiquetas necesarias para mejor visualizacion en sitios mobiles
+
+
+CONTENIDO DEL ARCHIVO MANIFEST.JSON
+
+
+{
+    "name": "Aprende web",
+    "shortname": "APW",
+    "description": "En esta aplicacion puedes aprender de web y desarrollo frontend",
+    "background_color": "#000", // COLOR DE FONDO MIENTRAS QUE LA APLICACION TRANSITA A PWA
+    "theme_color": "yellow", // COLOR DE LA BARRA DE NAVEGACION
+    "orientation": "portrait", // SE PUEDE USAR landscape o portrait DEPENDIENDO DE COMO QUERAMOS NUESTRA APLICACION
+    "display": "standalone", // EL DISPLAY TAMBIEN PUEDE SER BROWSER O STANDALONE
+    "start_url": "./?utm_source=web_app_manifest", // ES UN STANDAR
+    "scope": "./",
+    "lang":"es-MX",
+    "icons": [] // PARA TENER MAYOR CAPACIDAD EN DIFERENTES DISPOSITIVOS
+}
+
+// BUSCAR DEVTOOLS -- APLICACION
+
+
+/// luego de esto debemos registrar el service worker
+
+¿como se hace?
+
+un service worker no es mas que un archivo js que corre en segundo plano

@@ -1,0 +1,33 @@
+{
+    "name": "Aprende web",
+    "short_name": "APW",
+    "description": "En esta aplicacion puedes aprender de web y desarrollo frontend",
+    "background_color": "#000",
+    "theme_color": "yellow",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "../html/index.html?utm_source=web_app_manifest",
+    "id":"../html/index.html?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang":"es-MX",
+    "icons": [
+        {
+            "src": "./assets/software.png",
+            "sizes":"920x920",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./assets/software2.png",
+            "sizes":"500x500",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./assets/software3.png",
+            "sizes":"320x320",
+            "type":"image/png",
+            "purpose": "any"
+        }
+    ]
+}
