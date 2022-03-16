@@ -27,6 +27,7 @@ const urlToCache = [
     "../assets/images.png",
   ];
 
+  
 
 // ahora, los serviceWorker van a tener 3 eventos muy importantes
 // el self es para hacer referencia a si mismo
