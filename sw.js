@@ -13,17 +13,16 @@ como:
 
 const CACHE_NAME = "v1_cache_aprende_web";
 
-const urlToCache = [
+let urlToCache = [
   "./",
-  "../html/index.html",
   "https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
-  "../css/styles.css",
-  "../js/index.js",
-  "../js/navBar.js",
-  "../assets/logo.webp",
-  "../assets/images.png",
+  "./styles.css",
+  "./index.js",
+  "./navBar.js",
+  "./assets/logo.webp",
+  "./assets/images.png",
 ];
 
 
@@ -33,7 +32,7 @@ const urlToCache = [
 1.
 durante la fase de instalacion, generalmente se alamacena en cache los archivos estáticos
 */
-self.addEventListener("install", (e) => {
+self.addEventListener('install', e => {
   e.waitUntil(
     caches
       .open(CACHE_NAME)
@@ -54,7 +53,7 @@ una vez se instala el service Worker, se activa y busca los recursos para hacer 
 */
 
 // le vamos a programar eventos que incluso se ejecuten sin conexion
-self.addEventListener("activate", (e) => {
+self.addEventListener('activate', e => {
   const cacheWhiteList = [CACHE_NAME];
 
   e.waitUntil(
@@ -80,7 +79,7 @@ self.addEventListener("activate", (e) => {
 /*
 3. se va a encargar de recuperar todos los recursos del navegador, cuando si tenga conexion a internet, ya actualizar si hay algun cambio
 */
-self.addEventListener("fetch", (e) => {
+self.addEventListener('fetch', e => {
   // responder ya sea con el objeto en caché o continuar y buscar la url real
   e.respondWith(
     caches.match(e.request).then((res) => {
