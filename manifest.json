@@ -6,8 +6,8 @@
     "theme_color": "yellow",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "../html/index.html?utm_source=web_app_manifest",
-    "id":"../html/index.html?utm_source=web_app_manifest",
+    "start_url": "./?utm_source=web_app_manifest",
+    "id":"./?utm_source=web_app_manifest",
     "scope": "./",
     "lang":"es-MX",
     "icons": [
