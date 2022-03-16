@@ -21,13 +21,13 @@ const urlToCache = [
     "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
     "../css/styles.css",
-    "../js/index.js",
-    "../js/navBar.js",
+    "./index.js",
+    "./navBar.js",
     "../assets/logo.webp",
     "../assets/images.png",
   ];
 
-  
+
 
 // ahora, los serviceWorker van a tener 3 eventos muy importantes
 // el self es para hacer referencia a si mismo
