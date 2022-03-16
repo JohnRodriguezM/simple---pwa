@@ -11,7 +11,7 @@ como:
 
 // entonces creo mi nombre de cache
 
-const CACHE_NAME = "v1_cache_aprende_web";
+let CACHE_NAME = "v1_cache_aprende_web";
 
 let urlToCache = [
   "./",
