@@ -14,7 +14,7 @@ como:
 const CACHE_NAME = "v1_cache_aprende_web";
 
 
-/* const urlToCache = [
+const urlToCache = [
     "./",
     "../html/index.html",
     "https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css",
@@ -25,26 +25,8 @@ const CACHE_NAME = "v1_cache_aprende_web";
     "../js/navBar.js",
     "../assets/logo.webp",
     "../assets/images.png",
-  ]; */
+  ];
 
-const urlToCache = {
-  raiz: "./",
-  index_html: "../html/index.html",
-  hamburger_css:
-    "https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css",
-  bulma_css:
-    "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css",
-  fontawesome:
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
-  archivo_css: "../css/styles.css",
-  archivo_indexJs: "../js/index.js",
-  archivo_navBar: "../js/navBar.js",
-  img_logo: "../assets/logo.webp",
-  img_header: "../assets/images.png",
-};
-
-console.log(urlToCache.archivo_indexJs);
-console.log(urlToCache.bulma_css);
 
 // ahora, los serviceWorker van a tener 3 eventos muy importantes
 // el self es para hacer referencia a si mismo
