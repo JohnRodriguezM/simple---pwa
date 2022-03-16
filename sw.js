@@ -22,7 +22,6 @@ let urlToCache = [
   "./index.js",
   "./navBar.js",
   "./assets/logo.webp",
-  "./assets/images.png",
 ];
 
 
