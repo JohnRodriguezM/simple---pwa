@@ -26,8 +26,6 @@ const urlToCache = [
   "../assets/images.png",
 ];
 
-console.log(urlToCache.archivo_indexJs);
-console.log(urlToCache.bulma_css);
 
 // ahora, los serviceWorker van a tener 3 eventos muy importantes
 // el self es para hacer referencia a si mismo
