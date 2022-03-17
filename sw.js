@@ -20,11 +20,10 @@ let urlToCache = [
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
   "./styles.css",
   "./index.js",
-  "./navBar.js",
+  "./js/navBar.js",
   "./assets/logo.webp",
   "./assets/images.png",
 ];
-
 
 // ahora, los serviceWorker van a tener 3 eventos muy importantes
 // el self es para hacer referencia a si mismo
@@ -32,7 +31,7 @@ let urlToCache = [
 1.
 durante la fase de instalacion, generalmente se alamacena en cache los archivos estáticos
 */
-self.addEventListener('install', e => {
+self.addEventListener("install", (e) => {
   e.waitUntil(
     caches
       .open(CACHE_NAME)
@@ -53,22 +52,21 @@ una vez se instala el service Worker, se activa y busca los recursos para hacer 
 */
 
 // le vamos a programar eventos que incluso se ejecuten sin conexion
-self.addEventListener('activate', e => {
+self.addEventListener("activate", (e) => {
   const cacheWhiteList = [CACHE_NAME];
 
   e.waitUntil(
     caches
       .keys()
       .then((cacheNames) => {
-          return Promise.all(
-
-              cacheNames.map((cacheName) => {
-                //eliminamos lo que ya no se necesita en cache
-                if (cacheName.indexOf(cacheName) === -1) {
-                  return caches.delete(cacheName);
-                }
-              })
-          )
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            //eliminamos lo que ya no se necesita en cache
+            if (cacheName.indexOf(cacheName) === -1) {
+              return caches.delete(cacheName);
+            }
+          })
+        );
       })
       // le indica al serviceWorker activar la cache actual
       .then(() => self.clients.claim())
@@ -79,7 +77,7 @@ self.addEventListener('activate', e => {
 /*
 3. se va a encargar de recuperar todos los recursos del navegador, cuando si tenga conexion a internet, ya actualizar si hay algun cambio
 */
-self.addEventListener('fetch', e => {
+self.addEventListener("fetch", (e) => {
   // responder ya sea con el objeto en caché o continuar y buscar la url real
   e.respondWith(
     caches.match(e.request).then((res) => {
@@ -87,8 +85,8 @@ self.addEventListener('fetch', e => {
         // recuperamos del caché
         return res;
       }
-        // solicta nuevamente a la url
-        return fetch(e.request);
+      // solicta nuevamente a la url
+      return fetch(e.request);
     })
   );
 });
