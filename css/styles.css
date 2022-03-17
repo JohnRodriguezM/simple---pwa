@@ -8,9 +8,6 @@ body{
 }
 
 
-section + p {
-  color: blue;
-}
 section p {
   color: red;
 }
