@@ -1,4 +1,4 @@
-"use strict";
+/* "use strict";
 
 let CACHE_NAME = "v1_cache_aprende_web";
 
@@ -19,6 +19,7 @@ let urlToCache = [
   "./index.js",
   // archivo en donde se manda a llamar firebase
   "./js/firebase/appFirebase.mjs",
+  "./js/dinamico.js",
   // archivo donde se hace interactiva la navbar
   "./js/navBar.js",
   // imagenes del archivo
@@ -41,7 +42,6 @@ self.addEventListener("install", (e) => {
   );
 });
 
-/* le vamos a programar eventos que incluso se ejecuten sin conexion */
 self.addEventListener("activate", (e) => {
   const cacheWhiteList = [CACHE_NAME];
 
@@ -76,7 +76,7 @@ self.addEventListener("fetch", (e) => {
       return fetch(e.request);
     })
   );
-});
+}); */
 
 /*
   1. asignar un nombre a la version de nuestro cache y una de las caracteristicas que tienen las pwa es que nos permiten guardar en cache todos los recurso estáticos que a lo mejor no van a cambiar en nuestra app y que los podemos guardar directamente en el disco duro del usuario
