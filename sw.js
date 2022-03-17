@@ -1,16 +1,5 @@
 "use strict";
 
-/*
-1. asignar un nombre a la version de nuestro cache y una de las caracteristicas que tienen las pwa es que nos permiten guardar en cache todos los recurso estáticos que a lo mejor no van a cambiar en nuestra app y que los podemos guardar directamente en el disco duro del usuario
-
-adicionalmente la pwa tiene una caracteristicas un poco mas avanzadas
-como:
-    - API DE SINCRONIZACION EN SEGUNDO PLANO
-    - LANZAR NOTIFICACIONES PUS
-*/
-
-// entonces creo mi nombre de cache
-
 let CACHE_NAME = "v1_cache_aprende_web";
 
 let urlToCache = [
@@ -25,12 +14,6 @@ let urlToCache = [
   "./assets/images.png",
 ];
 
-// ahora, los serviceWorker van a tener 3 eventos muy importantes
-// el self es para hacer referencia a si mismo
-/*
-1.
-durante la fase de instalacion, generalmente se alamacena en cache los archivos estáticos
-*/
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches
@@ -46,12 +29,7 @@ self.addEventListener("install", (e) => {
   );
 });
 
-/*
-2.
-una vez se instala el service Worker, se activa y busca los recursos para hacer que funcione sin conexión
-*/
-
-// le vamos a programar eventos que incluso se ejecuten sin conexion
+ /* le vamos a programar eventos que incluso se ejecuten sin conexion */
 self.addEventListener("activate", (e) => {
   const cacheWhiteList = [CACHE_NAME];
 
@@ -74,9 +52,6 @@ self.addEventListener("activate", (e) => {
   );
 });
 
-/*
-3. se va a encargar de recuperar todos los recursos del navegador, cuando si tenga conexion a internet, ya actualizar si hay algun cambio
-*/
 self.addEventListener("fetch", (e) => {
   // responder ya sea con el objeto en caché o continuar y buscar la url real
   e.respondWith(
@@ -88,7 +63,33 @@ self.addEventListener("fetch", (e) => {
       // solicta nuevamente a la url
       return fetch(e.request);
     })
-  );
-});
+    );
+  });
+  
 
-/* const cache = [CACHE_NAME] */ //guardo eso en un array
+  
+  /*
+  1. asignar un nombre a la version de nuestro cache y una de las caracteristicas que tienen las pwa es que nos permiten guardar en cache todos los recurso estáticos que a lo mejor no van a cambiar en nuestra app y que los podemos guardar directamente en el disco duro del usuario
+  
+  adicionalmente la pwa tiene una caracteristicas un poco mas avanzadas
+  como:
+  - API DE SINCRONIZACION EN SEGUNDO PLANO
+  - LANZAR NOTIFICACIONES PUS
+  */
+ 
+ // entonces creo mi nombre de cache
+ 
+ // ahora, los serviceWorker van a tener 3 eventos muy importantes
+ // el self es para hacer referencia a si mismo
+ /*
+ 1.
+ durante la fase de instalacion, generalmente se alamacena en cache los archivos estáticos
+ */
+/*
+2.
+una vez se instala el service Worker, se activa y busca los recursos para hacer que funcione sin conexión
+*/
+
+/*
+      3. se va a encargar de recuperar todos los recursos del navegador, cuando si tenga conexion a internet, ya actualizar si hay algun cambio
+      */
