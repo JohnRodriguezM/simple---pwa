@@ -11,7 +11,7 @@ como:
 
 // entonces creo mi nombre de cache
 
-const CACHE_NAME = "v1_cache_aprende_web";
+let CACHE_NAME = "v1_cache_aprende_web";
 
 let urlToCache = [
   "./",
@@ -19,8 +19,8 @@ let urlToCache = [
   "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
   "./styles.css",
-  "./index.js",
-  "./navBar.js",
+  "./js/index.js",
+  "./js/navBar.js",
   "./assets/logo.webp",
   "./assets/images.png",
 ];
@@ -54,7 +54,7 @@ una vez se instala el service Worker, se activa y busca los recursos para hacer 
 
 // le vamos a programar eventos que incluso se ejecuten sin conexion
 self.addEventListener('activate', e => {
-  const cacheWhiteList = [CACHE_NAME];
+  let cacheWhiteList = [CACHE_NAME];
 
   e.waitUntil(
     caches
