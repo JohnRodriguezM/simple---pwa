@@ -15,3 +15,15 @@ section p {
 #error{
   text-align: center;
 }
+
+#reporteClima{
+  display: flex;
+  justify-content:center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#cardClima{
+  margin: 15px auto;
+  max-width: 400px;
+}

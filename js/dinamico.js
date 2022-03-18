@@ -3,7 +3,7 @@ const d = document;
 const containerClima = d.getElementById("reporteClima");
 console.log(containerClima);
 // para pintar en el DOM
-let elements = {
+const elements = {
   p1: d.querySelector(".clouds"),
   p2: d.querySelector(".description"),
   p3: d.querySelector(".id"),
@@ -11,9 +11,8 @@ let elements = {
   ptemMax: d.querySelector('.temMax'),
   pSensacion: d.querySelector('.sensacionTem')
 };
-let fragment = d.createDocumentFragment();
 const API_KEY = "4a7462df98952a0df1e59bf3a6307cfb";
-let $p = d.getElementById("error");
+const $p = d.getElementById("error");
 
 
 function conversion(element,K){
