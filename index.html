@@ -30,7 +30,7 @@
     <title>Aprende WEB</title>
 </head>
 
-<body>
+<body id = "body" onload="locationn()">
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -81,10 +81,10 @@
     <main class="">
 
         <section class="con">
-            <p>jjijijij</p>
-            <p>sdjsjd</p>
+            <p id = "error"></p>
         </section>
-        <!-- este es el espacio donde se va a ir modificando dinamicamente el contenido a tarves de ajax -->
+        <section id="reporteClima"></section>
+
     </main>
     <footer class="footer" style=" padding: 35px;">
         <div class="content has-text-centered">
@@ -96,18 +96,23 @@
             </p>
         </div>
     </footer>
+    <template id = "template">
+        <p id = "temperatura"></p>
+        <p id = "sensacionTermica"></p>
+        <p id = "velocidadViento"></p>
+    </template>
     <!-- documento principal -->
     <script type="module" src="./index.js"></script>
 
     <!-- desarrollo del service worker -->
     <script src="./sw.js"></script>
     <script src="./js/navBar.js"></script>
+    <script src="./js/dinamico.js"></script>
     <!-- uso de firebase -->
     <script type = "module" src="./js/firebase/appFirebase.mjs"></script>
     <!-- deploy with firebas hosting -->
 
     <!-- <script src="../js/toggleDarkMode.js"></script> -->
-    <script src="./js/dinamico.js"></script>
 </body>
 
 </html>

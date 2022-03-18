@@ -1,28 +1,25 @@
-"use strict";
+/* "use strict";
 
 let CACHE_NAME = "v1_cache_aprende_web";
 
 let urlToCache = [
-  // se guarda la raiz del documento
+
   "./",
-  // se guarda el documento index.html
+
   "./index.html",
-  // se guarda el cdnjs de la libreria hamburger.css
+
   "https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css",
-  // se guarda el cnjs de la libreria bulma.css
+
   "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css",
-  // se guarda el cnjs de la libreria font-awesome
+
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
-  // se guarda el archivo de estilo
+
   "./css/styles.css",
-  // archivo en donde se condiciona la existencia del serviceWorker
+
   "./index.js",
-  // archivo en donde se manda a llamar firebase
   "./js/firebase/appFirebase.mjs",
   "./js/dinamico.js",
-  // archivo donde se hace interactiva la navbar
   "./js/navBar.js",
-  // imagenes del archivo
   "./assets/logo.webp",
   "./assets/images.png",
 ];
@@ -77,7 +74,7 @@ self.addEventListener("fetch", (e) => {
     })
   );
 });
-
+ */
 /*
   1. asignar un nombre a la version de nuestro cache y una de las caracteristicas que tienen las pwa es que nos permiten guardar en cache todos los recurso estáticos que a lo mejor no van a cambiar en nuestra app y que los podemos guardar directamente en el disco duro del usuario
   

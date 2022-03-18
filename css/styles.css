@@ -11,3 +11,7 @@ body{
 section p {
   color: red;
 }
+
+#error{
+  text-align: center;
+}
