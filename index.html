@@ -52,14 +52,14 @@
                         Home
                     </a>
 
-                    <a class="navbar-item link" id="htmll">
+                   <!--  <a class="navbar-item link" id="htmll">
                         HTML
-                    </a>
+                    </a> -->
                     <!-- <a class="navbar-item link" id="csss">
                         CSS
                     </a> -->
-                    <a class="navbar-item link" id="jss">
-                        JavaScript
+                    <a class="navbar-item link" id="find-city">
+                        Busca tu ciudad
                     </a>
                 </div>
 
@@ -85,11 +85,11 @@
         </section>
         <section id="reporteClima">
             <!-- <p class="temMin"></p> -->
-            <p class="temMax"></p>
-            <p class="sensacionTem"></p>
-            <p class = "clouds"></p>
+            <!-- <p class="temMax"></p> -->
+            <!-- <p class="sensacionTem"></p> -->
+           <!--  <p class = "clouds"></p>
             <p class="description"></p>
-            <p class="id"></p>
+            <p class="id"></p> -->
         </section>
         <section id="bulmaUSo">
             <div class="card" id = "cardClima">
@@ -106,17 +106,17 @@
                       </figure>
                     </div>
                     <div class="media-content">
-                      <p class="title is-4 temMin">John Smith</p>
-                      <p class="subtitle is-6 ">@johnsmith</p>
+                        <p class="title is-4 temMin">John Smith</p>
+                        <p class="subtitle is-6 sensacionTem" style = "margin-bottom: 5px">@johnsmith</p>
+                        <p class="subtitle is-6 estadoClima"></p>
                     </div>
                   </div>
               
                   <div class="content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    
+                    <a href="#" class = "city"><!-- ciudad --></a> <a href="#" class = "country">#responsive</a>
                     <br>
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    <time id = "time"></time> <span> <time id = "fecha"></time> </span>
                   </div>
                 </div>
               </div>
@@ -134,12 +134,13 @@
         </div>
     </footer>
     <!-- documento principal -->
-    <script type="module" src="./index.js"></script>
+    <script src="./index.js"></script>
 
     <!-- desarrollo del service worker -->
     <script src="./sw.js"></script>
     <script src="./js/navBar.js"></script>
-    <script src="./js/dinamico.js"></script>
+    <script src="./js/climaUbication.js"></script>
+    <script type = "module" src="./js/climasDias.js"></script>
     <!-- uso de firebase -->
     <script type = "module" src="./js/firebase/appFirebase.mjs"></script>
     <!-- deploy with firebas hosting -->

@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict'; */
 
 //se condiciona la existencia o la capacidad del uso del service worker dentro del navegador
 // entonces se hace el condicional
