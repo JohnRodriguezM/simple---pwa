@@ -1,5 +1,5 @@
 /* console.log('------------------ llamado a otra api') */
-
+/* 
 import {locationn,d,API_KEY} from './climaUbication.mjs'
 
 
@@ -18,8 +18,7 @@ const getDataDays = async position => {
   finally {console.log(`yo siemppre salgo`)}
 }
 
-// se creo la funcion basica again para no generar confuncion
 const locacion = () => {
   navigator.geolocation.getCurrentPosition(getDataDays);
 };
-d.addEventListener('DOMContentLoaded',locacion)
+d.addEventListener('DOMContentLoaded',locacion) */
