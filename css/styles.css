@@ -5,6 +5,7 @@
 }
 body{
     margin: 0 auto;
+    
 }
 
 
@@ -21,9 +22,16 @@ section p {
   justify-content:center;
   text-align: center;
   flex-direction: column;
+  font-size: 1.5rem;
 }
 
 #cardClima{
   margin: 15px auto;
   max-width: 400px;
+  height:  280px;
+  border-radius:45px;
+}
+
+#content-weather{
+  height:300px;
 }
