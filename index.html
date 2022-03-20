@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <head>
     <html lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="HandheldFriendly" content="true"/>
+    <meta name="HandheldFriendly" content="true" />
     <link rel="apple-touch-startup-image" href="./assets/logo.webp">
     <!-- meta etiqueta para colorear la barra de navegacion del NAVEGADOR... :) -->
     <!-- <meta name="theme-color" content="#FFFFFF"/> -->
@@ -21,8 +22,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="./assets/logo.webp" type="image/x-icon">
-        <link rel="apple-touch-icon" href = "./assets/logo.webp">
+    <link rel="shortcut icon" href="./assets/logo.webp" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/logo.webp">
     <link rel="stylesheet" href="./css/styles.css">
 
     <!-- para que funcione la pwa debe haber un archivo manifest.json que se manda a llamar como si fuera un link css -->
@@ -30,7 +31,7 @@
     <title>Aprende WEB</title>
 </head>
 
-<body id = "body" onload="locationn()">
+<body id="body" >
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -48,24 +49,21 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item link" id="home">
-                        Home
-                    </a>
 
-                   <!--  <a class="navbar-item link" id="htmll">
+                    <!--  <a class="navbar-item link" id="htmll">
                         HTML
                     </a> -->
                     <!-- <a class="navbar-item link" id="csss">
                         CSS
                     </a> -->
-                    <a class="navbar-item link" id="find-city">
-                        Busca tu ciudad
-                    </a>
+                    <div class="div">
+                        <input class="input" id="find-city" placeholder="Find your city - Enter" autocomplete="on">
+                    </div>
                 </div>
 
                 <div class="navbar-end">
                     <div class="navbar-item">
-                       <!--  <div class="buttons">
+                        <!--  <div class="buttons">
                             <a class="button is-primary">
                                 <strong>Sign up</strong>
                             </a>
@@ -79,49 +77,45 @@
         </nav>
     </header>
     <main>
-
+        <!-- when the ubication is turn off -->
         <section class="con">
-            <p id = "error"></p>
-        </section>
-        <section id="reporteClima">
-            <!-- <p class="temMin"></p> -->
-            <!-- <p class="temMax"></p> -->
-            <!-- <p class="sensacionTem"></p> -->
-           <!--  <p class = "clouds"></p>
-            <p class="description"></p>
-            <p class="id"></p> -->
+            <p id="error"></p>
         </section>
         <section id="bulmaUSo">
-            <div class="card" id = "cardClima">
+            <div class="card" id="cardClima">
                 <!-- <div class="card-image">
                   <figure class="image is-4by3">
                     <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
                   </figure>
                 </div> -->
-                <div class="card-content" id = "content-weather" style = "padding-top:45px;">
-                  <div class="media" style = "gap: 25px">
-                    <div class="media-left">
-                      <figure class="image is-48x48" style = "margin-left: 20px;">
-                        <img id = "img-clima" alt="Current Weather">
-                      </figure>
+                <div class="card-content" id="content-weather" style="padding-top:45px;">
+                    <div class="media" style="gap: 25px">
+                        <div class="media-left">
+                            <figure class="image is-48x48" style="margin-left: 20px;">
+                                <img id="img-clima" alt="Current Weather">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-2 temMin">0°</p>
+                            <p class="subtitle is-6 sensacionTem" style="margin-bottom: 5px">-50° 🥶</p>
+                            <p class="subtitle is-6 estadoClima"></p>
+                        </div>
                     </div>
-                    <div class="media-content">
-                        <p class="title is-2 temMin">0°</p>
-                        <p class="subtitle is-6 sensacionTem" style = "margin-bottom: 5px">-50° 🥶</p>
-                        <p class="subtitle is-6 estadoClima"></p>
-                    </div>
-                  </div>
-              
-                  <div class="content" style = "margin-top:35px; text-align:center;">
-                    
-                    <a href="#" class = "subtitle is-5 city" title = "Do you know this city? -- click"><!-- ciudad --></a> <a href="#" class = "subtitle is-5  country "title = "Do you know this country? -- click">coming soon</a>
-                    <br>
-                    <time id = "time"></time> <span> <time id = "fecha"></time> </span>
-                  </div>
-                </div>
-              </div>
-        </section>
 
+                    <div class="content" style="margin-top:35px; text-align:center;">
+
+                        <a href="#" class="subtitle is-5 city" title="Do you know this city? -- click">
+                            <!-- ciudad --></a> <a href="#" class="subtitle is-5  country "
+                            title="Do you know this country? -- click">coming soon</a>
+                        <br>
+                        <time id="time"></time> <span> <time id="fecha"></time> </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="prediccionCLima" id="prediccionClima">
+            <!-- aqui es donde va a ir la prediccion del clima de los proximos dias segun el lugar de ubicacion -->
+        </section>
     </main>
     <footer class="footer" style=" padding: 35px;">
         <div class="content has-text-centered">
@@ -139,10 +133,11 @@
     <!-- desarrollo del service worker -->
     <script src="./sw.js"></script>
     <script src="./js/navBar.js"></script>
-    <script src="./js/climaUbication.js"></script>
-    <script type = "module" src="./js/climasDias.js"></script>
+    <script type = "module" src="./js/climaUbication.mjs"></script>
+    <script type="module" src="./js/climasDias.mjs"></script>
     <!-- uso de firebase -->
-    <script type = "module" src="./js/firebase/appFirebase.mjs"></script>
+    <script type="module" src="./js/firebase/appFirebase.mjs"></script>
+    <script type="module" src="./js/findCity.mjs"></script>
     <!-- deploy with firebas hosting -->
 
     <!-- <script src="../js/toggleDarkMode.js"></script> -->

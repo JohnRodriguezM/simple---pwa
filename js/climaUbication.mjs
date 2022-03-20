@@ -1,8 +1,7 @@
 "use strict";
-const d = document;
-const containerClima = d.getElementById("reporteClima");
+export const d = document;
+export const API_KEY = "4a7462df98952a0df1e59bf3a6307cfb";
 const $p = d.getElementById("error");
-const API_KEY = "4a7462df98952a0df1e59bf3a6307cfb";
 // para pintar en el DOM
 const elements = {
   estadoClima: d.querySelector(".estadoClima"),
@@ -83,7 +82,6 @@ const getData = async (puesto) => {
       `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
     );
     let response = await peticion.json();
-    console.log(response);
     // para info main
     let main = [response.main];
     city.innerHTML = `${response.name}`;
@@ -98,9 +96,12 @@ const getData = async (puesto) => {
 };
 
 // hace todo el trabajo de hallar la geolocalizacion
-const locationn = () => {
+export const locationn = () => {
   navigator.geolocation.getCurrentPosition(getData, siHayError);
 };
+
+// se manda a llamar la funcion de activacion
+document.addEventListener('DOMContentLoaded',locationn,true);
 
 // para la fecha y el reloj que se muestran en la card del tiempo
 const fecha = () => {
