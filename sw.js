@@ -1,4 +1,4 @@
-"use strict";
+/* "use strict";
 
 let CACHE_NAME = "v1_cache_aprende_web";
 
@@ -78,7 +78,7 @@ self.addEventListener("fetch", (e) => {
     })
   );
 });
-
+ */
 /*
   1. asignar un nombre a la version de nuestro cache y una de las caracteristicas que tienen las pwa es que nos permiten guardar en cache todos los recurso estáticos que a lo mejor no van a cambiar en nuestra app y que los podemos guardar directamente en el disco duro del usuario
   
