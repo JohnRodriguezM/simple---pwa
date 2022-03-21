@@ -1,9 +1,9 @@
 {
-    "name": "Aprende web",
-    "short_name": "APW",
-    "description": "En esta aplicacion puedes aprender de web y desarrollo frontend",
+    "name": "Current climate ",
+    "short_name": "CCL",
+    "description": "Puedes ver el clima de más de 200 mil ciudades en el mundo",
     "background_color": "#000",
-    "theme_color": "yellow",
+    "theme_color": "blue",
     "orientation": "portrait",
     "display": "standalone",
     "start_url": "./?utm_source=web_app_manifest",
@@ -12,20 +12,26 @@
     "lang":"es-MX",
     "icons": [
         {
-            "src": "./assets/software.png",
-            "sizes":"920x920",
+            "src": "./assets/logo1.png",
+            "sizes":"512x512",
             "type":"image/png",
             "purpose": "any"
         },
         {
-            "src": "./assets/software2.png",
-            "sizes":"500x500",
-            "type":"image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "./assets/software3.png",
+            "src": "./assets/logo2.png",
             "sizes":"320x320",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./assets/logo3.png",
+            "sizes":"120x120",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./assets/logo4.png",
+            "sizes":"96x96",
             "type":"image/png",
             "purpose": "any"
         }

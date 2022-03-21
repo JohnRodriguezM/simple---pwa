@@ -20,7 +20,10 @@ let urlToCache = [
   "./js/firebase/appFirebase.mjs",
   "./js/climaUbication.mjs",
   "./js/navBar.js",
-  "./assets/logo.webp",
+  "./assets/logo1.png",
+  "./assets/logo2.png",
+  "./assets/logo3.png",
+  "./assets/logo4.png",
   "./assets/images.png",
   "./assets"
 ];
