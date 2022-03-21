@@ -7,7 +7,9 @@ body{
     margin: 0 auto;
     
 }
-
+main{
+  margin-top:55px;
+}
 #find{
   display: inline-flex;
 }
@@ -37,10 +39,23 @@ section p {
 #cardClima{
   margin: 15px auto;
   max-width: 400px;
-  height:  280px;
+  height:  370px;
   border-radius:45px;
 }
 
 #content-weather{
   height:300px;
+}
+
+/*otra seccion*/
+
+hr{
+  margin: 20px auto;
+}
+
+.div-secondpart{
+  display: inline-flex;
+}
+.div-secondpart > div{
+  margin: 8px 10px;
 }
