@@ -39,7 +39,7 @@ section p {
 #cardClima{
   margin: 15px auto;
   max-width: 400px;
-  height:  370px;
+  height:  400px;
   border-radius:45px;
 }
 
@@ -65,3 +65,26 @@ hr{
 #media-content {
     overflow-x: overflow;
 }}
+
+/*para el contacto fijo*/
+
+.absolute{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.absolute:active{
+  transform: scale(.9)
+}
+
+/*main mediaquerie*/
+
+@media (min-width: 1000px){
+  main{
+    margin: 55px auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width:75%;
+  }
+}
