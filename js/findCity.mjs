@@ -1,7 +1,7 @@
 "use strict";
 /* if(e.which === 13){
       alert("this option isn't available yet")} */
-let form = document.getElementById('find')
+/* let form = document.getElementById('find')
 const findCity = async (position) => {
   const { latitude, longitude } = position.coords;
   try {
@@ -13,6 +13,5 @@ const findCity = async (position) => {
 const ubicacion = (e) => {
   navigator.geolocation.getCurrentPosition(findCity);
   if(e.target === form) e.preventDefault();
-  /* location.reload() */
 };
-document.getElementById("find").addEventListener("submit", ubicacion);
+document.getElementById("find").addEventListener("submit", ubicacion); */
