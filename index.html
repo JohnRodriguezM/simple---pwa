@@ -50,9 +50,9 @@
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
 
-                     <a class="navbar-item link" id="htmll">
-                        Id capital cities of colombia
-                    </a>
+                    <p class="navbar-item link" id="htmll">
+                        I use&nbsp <a href="https://openweathermap.org/current#current_JSON">  (this) </a>&nbspAPI
+                    </p>
                     <a class="navbar-item link" id="csss">
                         Id most important cities around the world
                     </a>
@@ -78,11 +78,12 @@
         <!-- when the ubication is turn off -->
         <section class="con">
             <p id="error"></p>
-            <p class="title is-4" style="text-align:center">Find your city, use id city for extreme precision </p>
+            <p class="title is-4" style="text-align:center; width: 85%; margin: 25px auto; max-width: 400px;">Use name
+                city with the first letter capitalized</p>
             <div class="div" style="text-align:center; margin-bottom: 15px;">
                 <form action="" id="find">
                     <!--  <input type = "text" class="input" id="find-city" placeholder="latitude" autocomplete="on"> -->
-                    <input type="text" name="" id="longitude" class="input" placeholder="ID city" autocomplete="on">
+                    <input type="text" name="" id="longitude" class="input" placeholder="Name city" autocomplete="on">
                     <input class="button" type="submit" value="Search">
                 </form>
             </div>
@@ -94,7 +95,7 @@
                     <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
                   </figure>
                 </div> -->
-                <div class="card-content" id="content-weather" style="padding-top:45px;">
+                <div class="card-content" id="content-weather" style="padding-top:45px; ">
                     <div class="media" style="gap: 25px">
                         <div class="media-left">
                             <figure class="image is-48x48" style="margin-left: 20px;">
@@ -102,8 +103,8 @@
                                 <img id="img-clima" alt="Current Weather">
                             </figure>
                         </div>
-                        <div class="media-content">
-                            <p class="title is-2 temMin">0°</p>
+                        <div class="media-content" id="media-content" style="overflow-x: overflow">
+                            <p class="title is-2 temMin">0° .find your city </p>
                             <p class="subtitle is-6 sensacionTem" style="margin-bottom: 5px">-50° 🥶</p>
                             <p class="subtitle is-6 estadoClima"></p>
                         </div>
@@ -111,7 +112,7 @@
 
                     <div class="content" style="margin-top:35px; text-align:center;">
 
-                        <a href="#" class="subtitle is-5 city" title="Do you know this city? -- click">
+                        <a href="#" class="subtitle is-5 city" title="Do you know this city? -- click"> City
                             <!-- ciudad --></a> <a href="#" class="subtitle is-5  country "
                             title="Do you know this country? -- click">coming soon</a>
                         <br>

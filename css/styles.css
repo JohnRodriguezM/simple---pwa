@@ -59,3 +59,9 @@ hr{
 .div-secondpart > div{
   margin: 8px 10px;
 }
+
+
+@media screen and (max-width: 768px){
+#media-content {
+    overflow-x: overflow;
+}}

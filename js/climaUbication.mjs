@@ -30,6 +30,9 @@ const imagenCLima = (temperatura, estado_clima) => {
     ).src = `../assets/caliente.png`);
   }
   // para clouds
+  if(temperatura < 0){
+    return document.getElementById("img-clima").src = `../assets/cold-withoutsnow.png`
+  }
   if(temperatura < 18){
     return document.getElementById("img-clima").src = `../assets/frio.png`
   }
@@ -51,9 +54,7 @@ const imagenCLima = (temperatura, estado_clima) => {
     return document.getElementById("img-clima").src = `../assets/extreme.png`;
   }
   // para snow
-  if(temperatura < 0 && estado_clima === 'Snow'){
-    return document.getElementById("img-clima").src = `../assets/cold-withoutsnow.png`
-  }
+  
 };
 
 function guardarLocalStorage(responsee){
@@ -112,7 +113,7 @@ const getData = async (puesto) => {
   try {
     const { city, country, ptemMin, pSensacion, estadoClima } = elements;
     let peticion = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?id=${Number(inputLatitud.value)}&appid=${API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${inputLatitud.value}&appid=${API_KEY}&units=metric`
     );
     let response = await peticion.json();
     console.log(response);
