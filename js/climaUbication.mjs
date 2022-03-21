@@ -146,7 +146,9 @@ const getData = async (puesto) => {
     city.innerHTML = `${response.name}`;
     country.innerHTML = `- ${response.sys.country}`;
     ptemMin.innerHTML = `${response.main.temp.toFixed(1)} °C`;
-    pSensacion.innerHTML = `${response.main.feels_like.toFixed(1)} °C -- thermal sensation`;
+    pSensacion.innerHTML = `${response.main.feels_like.toFixed(
+      1
+    )} °C -- thermal sensation`;
     estadoClima.innerHTML = response.weather[0].main;
     visibility.innerHTML = `${response.visibility / 1000} Km `;
     imagenCLima(response.main.temp, response.weather[0].main);
