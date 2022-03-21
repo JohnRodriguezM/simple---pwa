@@ -8,7 +8,11 @@ body{
     
 }
 
-#find-city{
+#find{
+  display: inline-flex;
+}
+
+#find-city,#longitude,.button{
   margin-top: 7px;
   border: 1px solid #128CF5;
 
